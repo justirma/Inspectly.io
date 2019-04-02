@@ -6,26 +6,25 @@ const browsersync = require("browser-sync").create();
 const cleanCSS = require("gulp-clean-css");
 const del = require("del");
 const gulp = require("gulp");
-const header = require("gulp-header");
 const merge = require("merge-stream");
 const plumber = require("gulp-plumber");
 const rename = require("gulp-rename");
 const sass = require("gulp-sass");
 const uglify = require("gulp-uglify");
 
-// Load package.json for banner
-const pkg = require("./package.json");
+// // Load package.json for banner
+// const pkg = require("./package.json");
 
-// Set the banner content
-const banner = [
-  "/*!\n",
-  " * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n",
-  " * Copyright 2013-" + new Date().getFullYear(),
-  " <%= pkg.author %>\n",
-  " * Licensed under <%= pkg.license %> (https://github.com/BlackrockDigital/<%= pkg.name %>/blob/master/LICENSE)\n",
-  " */\n",
-  "\n"
-].join("");
+// // Set the banner content
+// const banner = [
+//   "/*!\n",
+//   " * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n",
+//   " * Copyright 2013-" + new Date().getFullYear(),
+//   " <%= pkg.author %>\n",
+//   " * Licensed under <%= pkg.license %> (https://github.com/BlackrockDigital/<%= pkg.name %>/blob/master/LICENSE)\n",
+//   " */\n",
+//   "\n"
+// ].join("");
 
 // BrowserSync
 function browserSync(done) {
@@ -46,7 +45,7 @@ function browserSyncReload(done) {
 
 // Clean vendor
 function clean() {
-  return del(["./vendor/"]);
+  return del(["./vendor/", "./dist/"]);
 }
 
 // Bring third party dependencies from node_modules into vendor directory
@@ -105,19 +104,14 @@ function css() {
         cascade: false
       })
     )
-    .pipe(
-      header(banner, {
-        pkg: pkg
-      })
-    )
-    .pipe(gulp.dest("./css"))
+    .pipe(gulp.dest("./dist/css"))
     .pipe(
       rename({
         suffix: ".min"
       })
     )
     .pipe(cleanCSS())
-    .pipe(gulp.dest("./css"))
+    .pipe(gulp.dest("./dist/css"))
     .pipe(browsersync.stream());
 }
 
@@ -127,17 +121,16 @@ function js() {
     .src(["./js/*.js", "!./js/*.min.js"])
     .pipe(uglify())
     .pipe(
-      header(banner, {
-        pkg: pkg
-      })
-    )
-    .pipe(
       rename({
         suffix: ".min"
       })
     )
-    .pipe(gulp.dest("./js"))
+    .pipe(gulp.dest("./dist/js"))
     .pipe(browsersync.stream());
+}
+
+function copyHTML() {
+  return gulp.src(["./index.html", "./FAQ.html"]).pipe(gulp.dest("./dist"));
 }
 
 // Watch files
@@ -149,7 +142,7 @@ function watchFiles() {
 
 // Define complex tasks
 const vendor = gulp.series(clean, modules);
-const build = gulp.series(vendor, gulp.parallel(css, js));
+const build = gulp.series(vendor, gulp.parallel(css, js, copyHTML));
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 
 // Export tasks
