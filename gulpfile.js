@@ -130,7 +130,9 @@ function js() {
 }
 
 function copyHTML() {
-  return gulp.src(["./index.html", "./FAQ.html"]).pipe(gulp.dest("./dist"));
+  return gulp
+    .src(["./index.html", "./FAQ.html", "./vendor"])
+    .pipe(gulp.dest("./dist"));
 }
 
 // Watch files
