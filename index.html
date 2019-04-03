@@ -9,25 +9,19 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>LaunchIterate | Get your app or website ready for human eyes!</title>
+    <title>Inspectly | Get your app or website ready for human eyes!</title>
 
-    <!-- Bootstrap core CSS -->
+    <!-- Latest Bootstrap compiled and minified CSS -->
     <link
       rel="stylesheet"
-      type="text/css"
-      href="dist/vendor/bootstrap/css/bootstrap.min.css"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
 
     <!-- Custom fonts for this template -->
     <link
-      href="dist/vendor/fontawesome-free/css/all.min.css"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       type="text/css"
       rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="dist/vendor/simple-line-icons/css/simple-line-icons.css"
     />
     <link
       href="https://fonts.googleapis.com/css?family=Lato"
@@ -51,18 +45,61 @@
     <!-- Custom styles for this template -->
     <link href="dist/css/new-age.min.css" type="text/css" rel="stylesheet" />
 
-    <!--Crisp chatbox-->
-    <script type="text/javascript">
-      window.$crisp = [];
-      window.CRISP_WEBSITE_ID = "805fddd0-052a-4106-9c22-110b04490d54";
-      (function() {
-        d = document;
-        s = d.createElement("script");
-        s.src = "https://client.crisp.chat/l.js";
-        s.async = 1;
-        d.getElementsByTagName("head")[0].appendChild(s);
+    <
+    <!-- Start of Async Drift Code -->
+    <script>
+      "use strict";
+
+      !(function() {
+        var t = (window.driftt = window.drift = window.driftt || []);
+        if (!t.init) {
+          if (t.invoked)
+            return void (
+              window.console &&
+              console.error &&
+              console.error("Drift snippet included twice.")
+            );
+          (t.invoked = !0),
+            (t.methods = [
+              "identify",
+              "config",
+              "track",
+              "reset",
+              "debug",
+              "show",
+              "ping",
+              "page",
+              "hide",
+              "off",
+              "on"
+            ]),
+            (t.factory = function(e) {
+              return function() {
+                var n = Array.prototype.slice.call(arguments);
+                return n.unshift(e), t.push(n), t;
+              };
+            }),
+            t.methods.forEach(function(e) {
+              t[e] = t.factory(e);
+            }),
+            (t.load = function(t) {
+              var e = 3e5,
+                n = Math.ceil(new Date() / e) * e,
+                o = document.createElement("script");
+              (o.type = "text/javascript"),
+                (o.async = !0),
+                (o.crossorigin = "anonymous"),
+                (o.src =
+                  "https://js.driftt.com/include/" + n + "/" + t + ".js");
+              var i = document.getElementsByTagName("script")[0];
+              i.parentNode.insertBefore(o, i);
+            });
+        }
       })();
+      drift.SNIPPET_VERSION = "0.3.1";
+      drift.load("e4pbg3f36tp6");
     </script>
+    <!-- End of Async Drift Code -->
   </head>
 
   <body id="page-top">
@@ -70,7 +107,7 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
-          LaunchIterate🚀</a
+          Inspectly🔎</a
         >
         <button
           class="navbar-toggler navbar-toggler-right"
@@ -160,15 +197,13 @@
     <section class="contact bg-primary" id="contact">
       <div class="container">
         <h2>
-          We
-          <i class="fas fa-heart"></i>
-          working with motivated teams, freelancers or entrepreneurs!
+          We ❤️ working with motivated teams, freelancers or entrepreneurs!
         </h2>
         <a href="mailto:hello@launchiterate.tech"><p>Need support?</p></a>
         <ul class="list-inline list-social">
           <li class="list-inline-item social-twitter">
             <a href="#">
-              <i class="fab fa-twitter"></i>
+              <i class="fa fa-twitter" aria-hidden="true"></i>
             </a>
           </li>
         </ul>
@@ -190,20 +225,26 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script
+    <!-- <script
       type="text/javascript"
       src="dist/vendor/jquery/jquery.min.js"
     ></script>
     <script
       type="text/javascript"
       src="dist/vendor/bootstrap/js/bootstrap.bundle.min.js"
-    ></script>
+    ></script> -->
 
     <!-- Plugin JavaScript -->
-    <script
+    <!-- <script
       type="text/javascript"
       src="dist/vendor/jquery-easing/jquery.easing.min.js"
-    ></script>
+    ></script> -->
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <!-- Custom scripts for this template -->
     <script type="text/javascript" src="dist/js/new-age.min.js"></script>
