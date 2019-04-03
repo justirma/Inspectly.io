@@ -1,11 +1,11 @@
 {
-  "title": "LaunchIterate",
-  "name": "launch-iterate",
+  "title": "Inspectly",
+  "name": "Inspectly",
   "version": "5.0.4",
   "scripts": {
     "start": "gulp watch"
   },
-  "description": "LaunchIterate | Get your app or website ready for human eyes!",
+  "description": "Inspectly | Get your app or website ready for human eyes!",
   "keywords": [
     "css",
     "sass",
@@ -14,10 +14,10 @@
     "theme",
     "template"
   ],
-  "homepage": "https://launchiterate",
+  "homepage": "https://inspectly.io",
   "bugs": {
     "url": "https://github.com/justirma/launchiterate",
-    "email": "hello@launchiterate.tech"
+    "email": "hello@inspectly.io"
   },
   "license": "MIT",
   "repository": {
