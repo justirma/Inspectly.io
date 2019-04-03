@@ -43,9 +43,9 @@ function browserSyncReload(done) {
   done();
 }
 
-// Clean vendor
+// Clean dist
 function clean() {
-  return del(["./vendor/", "./dist/"]);
+  return del(["./dist/"]);
 }
 
 // Bring third party dependencies from node_modules into vendor directory
@@ -141,15 +141,13 @@ function watchFiles() {
 }
 
 // Define complex tasks
-const vendor = gulp.series(clean, modules);
-const build = gulp.series(vendor, gulp.parallel(css, js, copyHTML));
+const build = gulp.series(clean, gulp.parallel(css, js, copyHTML), modules);
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 
 // Export tasks
 exports.css = css;
 exports.js = js;
 exports.clean = clean;
-exports.vendor = vendor;
 exports.build = build;
 exports.watch = watch;
 exports.default = build;
