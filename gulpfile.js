@@ -53,29 +53,29 @@ function modules() {
   // Bootstrap
   var bootstrap = gulp
     .src("./node_modules/bootstrap/dist/**/*")
-    .pipe(gulp.dest("./vendor/bootstrap"));
+    .pipe(gulp.dest("./dist/vendor/bootstrap"));
   // Font Awesome
   var fontAwesome = gulp
     .src("./node_modules/@fortawesome/**/*")
-    .pipe(gulp.dest("./vendor"));
+    .pipe(gulp.dest("./dist/vendor"));
   // jQuery Easing
   var jqueryEasing = gulp
     .src("./node_modules/jquery.easing/*.js")
-    .pipe(gulp.dest("./vendor/jquery-easing"));
+    .pipe(gulp.dest("./dist/vendor/jquery-easing"));
   // jQuery
   var jquery = gulp
     .src([
       "./node_modules/jquery/dist/*",
       "!./node_modules/jquery/dist/core.js"
     ])
-    .pipe(gulp.dest("./vendor/jquery"));
+    .pipe(gulp.dest("./dist/vendor/jquery"));
   // Simple Line Icons
   var simpleLineIconsFonts = gulp
     .src("./node_modules/simple-line-icons/fonts/**")
-    .pipe(gulp.dest("./vendor/simple-line-icons/fonts"));
+    .pipe(gulp.dest("./dist/vendor/simple-line-icons/fonts"));
   var simpleLineIconsCSS = gulp
     .src("./node_modules/simple-line-icons/css/**")
-    .pipe(gulp.dest("./vendor/simple-line-icons/css"));
+    .pipe(gulp.dest("./dist/vendor/simple-line-icons/css"));
   return merge(
     bootstrap,
     fontAwesome,
@@ -130,9 +130,7 @@ function js() {
 }
 
 function copyHTML() {
-  return gulp
-    .src(["./index.html", "./FAQ.html", "./vendor/bootstrap/css"])
-    .pipe(gulp.dest("./dist"));
+  return gulp.src(["./index.html", "./FAQ.html"]).pipe(gulp.dest("./dist"));
 }
 
 // Watch files
