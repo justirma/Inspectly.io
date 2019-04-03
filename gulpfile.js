@@ -131,7 +131,7 @@ function js() {
 
 function copyHTML() {
   return gulp
-    .src(["./index.html", "./FAQ.html", "./vendor"])
+    .src(["./index.html", "./FAQ.html", "./vendor/bootstrap/css"])
     .pipe(gulp.dest("./dist"));
 }
 
