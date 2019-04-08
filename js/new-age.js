@@ -47,6 +47,3 @@
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
 })(jQuery); // End of use strict
-
-// Crisp
-$crisp.push(["safe", true]);
