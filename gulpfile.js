@@ -92,7 +92,15 @@ function js() {
 }
 
 function copyHTML() {
-  return gulp.src(["./index.html", "./FAQ.html"]).pipe(gulp.dest("./dist"));
+  return gulp
+    .src([
+      "./index.html",
+      "./FAQ.html",
+      "./accessibility-services.html",
+      "./podcasts-services.html",
+      "./proofing-services.html"
+    ])
+    .pipe(gulp.dest("./dist"));
 }
 
 // Watch files
