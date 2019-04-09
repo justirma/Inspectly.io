@@ -2,22 +2,20 @@
 #mainNav {
   border-color: fade-out($gray-darker, 0.95);
   background-color: white;
-  height: 70px;
+  height: 60px;
   @include transition-all;
   @include heading-font;
-  .navbar-brand {
-    color: $theme-primary;
-    @include heading-font;
-    &:hover,
-    &:focus {
-      color: darken($theme-primary, 10%);
-    }
+
+  .navbar-brand img {
+    width: 30%;
   }
+
   .navbar-toggler {
     font-size: 12px;
     padding: 8px 8px;
     color: $gray-darker;
   }
+
   .navbar-nav {
     > li {
       > a {
