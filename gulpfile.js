@@ -11,6 +11,7 @@ const plumber = require("gulp-plumber");
 const rename = require("gulp-rename");
 const sass = require("gulp-sass");
 const uglify = require("gulp-uglify");
+var concat = require("gulp-concat");
 
 // // Load package.json for banner
 // const pkg = require("./package.json");
@@ -95,7 +96,7 @@ function copyHTML() {
   return gulp
     .src([
       "./index.html",
-      "./FAQ.html",
+      "./help.html",
       "./accessibility-services.html",
       "./podcasts-services.html",
       "./proofing-services.html"

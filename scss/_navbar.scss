@@ -2,12 +2,12 @@
 #mainNav {
   border-color: fade-out($gray-darker, 0.95);
   background-color: white;
-  height: 60px;
+  height: 15%;
   @include transition-all;
   @include heading-font;
 
   .navbar-brand img {
-    width: 30%;
+    width: 25%;
   }
 
   .navbar-toggler {
@@ -58,7 +58,7 @@
     }
     &.navbar-shrink {
       border-color: fade-out($gray-darker, 0.9);
-      background-color: $theme-primary;
+      background-color: #fff;
       .navbar-brand {
         color: $gray-darker;
         &:hover,
