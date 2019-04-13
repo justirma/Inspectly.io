@@ -2,9 +2,9 @@
 
 ### Todo:
 
-[] Add a "scroll down" arrow animation to help users who may not scroll down to view the rest of the page
-[] Edit wording on home page
-[] Add a "Help" or "Need support?" nav item
-[] Fix the mobile menu
-[] Create an animated mobile menu (minimal)
-[] Add a transition in text on load
+- [] Add a "scroll down" arrow animation to help users who may not scroll down to view the rest of the page
+- [] Edit wording on home page
+- [] Add a "Help" or "Need support?" nav item
+- [] Fix the mobile menu
+- [] Create an animated mobile menu (minimal)
+- [] Add a transition in text on load

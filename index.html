@@ -126,56 +126,33 @@
             src="https://i.postimg.cc/pp7b0D7Y/toobusy-mobile.png"
         /></a>
 
-        <button
-          class="navbar-toggler navbar-toggler-right hidden-sm-up ml-auto"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          Menu
-          <i class="fas fa-bars"></i>
-        </button>
+        <div class="dropdown">
+          <button
+            type="button"
+            class="btn dropdown-toggle"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Menu
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="https://toobusy.co">Home</a>
+            <a class="dropdown-item" href="https://toobusy.co/proofing-services"
+              >Proofreading</a
+            >
+            <a
+              class="dropdown-item"
+              href="https://toobusy.co/accessibility-services"
+              >Web Accessibility</a
+            >
+            <a class="dropdown-item" href="https://toobusy.co/podcasts-services"
+              >Podcast Edit</a
+            >
 
-        <div
-          class="collapse navbar-collapse navbar-toggleable-xs"
-          id="navbarResponsive"
-        >
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="/index.html">Home</a>
-            </li>
-
-            <li class="nav-item">
-              <a
-                class="nav-link js-scroll-trigger"
-                href="/proofing-services.html"
-                >Proofreading</a
-              >
-            </li>
-
-            <li class="nav-item">
-              <a
-                class="nav-link js-scroll-trigger"
-                href="/accessibility-services.html"
-                >Web Accessibility</a
-              >
-            </li>
-
-            <li class="nav-item">
-              <a
-                class="nav-link js-scroll-trigger"
-                href="/podcasts-services.html"
-                >Podcast</a
-              >
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="/help.html">Help</a>
-            </li>
-          </ul>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://toobusy.co/help">Help</a>
+          </div>
         </div>
       </div>
     </nav>
@@ -290,13 +267,28 @@
       </div>
     </footer>
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--Path to jQuery-->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--Path to Popper - it is for dropsdowns etc in bootstrap-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+      integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+      crossorigin="anonymous"
+    ></script>
 
-    <!-- Custom scripts for this template -->
+    <!--Path to bootsrap-->
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+      integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--Custom Scripts-->
     <script type="text/javascript" src="dist/js/new-age.min.js"></script>
   </body>
 </html>
