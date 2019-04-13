@@ -8,13 +8,11 @@
   @include heading-font;
 
   .navbar-brand img {
-    width: 25%;
+    width: 15%;
   }
 
-  .navbar-toggler {
-    font-size: 12px;
-    padding: 8px 8px;
-    color: $gray-darker;
+  .dropdown-toggle {
+    font-size: 74%;
   }
 
   .navbar-nav {
@@ -74,6 +72,9 @@
           color: $theme-primary;
         }
       }
+    }
+
+    .dropdown-toggle {
     }
   }
 }
